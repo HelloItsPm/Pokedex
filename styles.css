@@ -1,0 +1,248 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+.wallpaper{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url(assets/images/wallpaper.jpg);
+    background-size:contain;
+    background-repeat: repeat;
+    background-position: top left;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+.head{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+}
+.headSpace{
+    display: flex;
+    width: 30%;
+    padding: 10px;
+}
+.searchContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 30%;
+}
+.searchBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 35px;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px 20px;
+    gap: 5px;
+}
+.inputSearch{
+    display: flex;
+    flex-direction: column;
+}
+#name-filter{
+    font-size: 16px;
+    font-weight: 400;
+    color: #D4D4D4;
+    background-color: transparent;
+    border: none;
+    border-color: transparent;
+}
+.line{
+    height: 1px;
+    width: 100%;
+    background-color: #D4D4D4;
+}
+#filter-toggle-container {
+    margin-top: 20px;
+}
+#toggle-filters{
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #C41A1A;
+    border-bottom: none;
+    background-color: #cc3333;
+    border-radius: 10px 10px 0px 0px;
+    padding: 5px 10px;
+}
+#filter-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(120,120,120,0.3);
+    border-top: 3px solid #C41A1A;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 35px 0;
+}
+
+.filter-buttons button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-buttons button.active {
+    background-color: #007bff;
+    border: 3px solid #104175;
+    color: white;
+}
+.typeTitle{
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #424242;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 35px;
+}
+
+#pokemon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba(120,120,120,0.5);
+    border-top: 3px solid #C41A1A;
+}
+
+.pokemon-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.pokemon-card img {
+    width: 200px;
+    height: 200px;
+}
+
+.pokemon-card .pokemon-name {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.pokemon-card .pokemon-id {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.pokemon-card .pokemon-type {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemon-card .pokemon-stats {
+    margin-top: 10px;
+    display: flex;
+
+}
+
+.pokemon-card .pokemon-stats span {
+    display: flex;
+    padding: 0 5px;
+}
+
+.pokemon-card .pokemon-stats span:nth-child(2) {
+    color: #888;
+}
+
+.type-normal { background-color: #A8A77A; color: white; padding: 2px 5px; border-radius: 5px; }
+.type-fire { background-color: #EE8130; color: white; padding: 2px 5px; border-radius: 5px; }
+.type-water { background-color: #6390F0; color: white; padding: 2px 5px; border-radius: 5px; }
+.type-grass { background-color: #7AC74C; color: white; padding: 2px 5px; border-radius: 5px; }
+.type-electric { background-color: #F7D02C; color: white; padding: 2px 5px; border-radius: 5px; }
+.type-ice { background-color: #96D9D6; color: white; padding: 2px 5px; border-radius: 5px; }
+.type-fighting { background-color: #C22E28; color: white; padding: 2px 5px; border-radius: 5px; }
+.type-poison { background-color: #A33EA1; color: white; padding: 2px 5px; border-radius: 5px; }
+.type-ground { background-color: #E2BF65; color: white; padding: 2px 5px; border-radius: 5px; }
+.type-flying { background-color: #A98FF3; color: white; padding: 2px 5px; border-radius: 5px; }
+.type-psychic { background-color: #F95587; color: white; padding: 2px 5px; border-radius: 5px; }
+.type-bug { background-color: #A6B91A; color: white; padding: 2px 5px; border-radius: 5px; }
+.type-rock { background-color: #B6A136; color: white; padding: 2px 5px; border-radius: 5px; }
+.type-ghost { background-color: #735797; color: white; padding: 2px 5px; border-radius: 5px; }
+.type-dragon { background-color: #6F35FC; color: white; padding: 2px 5px; border-radius: 5px; }
+.type-dark { background-color: #705746; color: white; padding: 2px 5px; border-radius: 5px; }
+.type-steel { background-color: #B7B7CE; color: white; padding: 2px 5px; border-radius: 5px; }
+.type-fairy { background-color: #D685AD; color: white; padding: 2px 5px; border-radius: 5px; }
+
+#back-to-top {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #424242; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 10px 14px; /* Some padding */
+    border-radius: 50%; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#back-to-top:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+
+@media all and (max-width: 800px) {
+    .head{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+}
